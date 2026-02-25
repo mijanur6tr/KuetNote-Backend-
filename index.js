@@ -16,7 +16,10 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // frontend origin
+  origin: [
+    'http://localhost:5173',
+    'https://kuet-note.vercel.app'
+  ],
   credentials: true
 }));
 app.use(express.json());
